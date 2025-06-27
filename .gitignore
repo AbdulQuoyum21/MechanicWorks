@@ -57,3 +57,5 @@ nunit-*.xml
 /.vs/Mechanic/v17
 /.vs/Mechanic-Workshop-Management/CopilotIndices/17.13.444.19527
 /.vs/Mechanic-Workshop-Management/FileContentIndex
+/.vs/Mechanic
+/.vs/Mechanic-Workshop-Management/DesignTimeBuild
