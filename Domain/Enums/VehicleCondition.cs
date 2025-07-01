@@ -2,10 +2,10 @@
 {
     public enum VehicleCondition
     {
-        Excellent = 1, 
-        Good,        
-        Fair,        
-        Poor,        
+        Excellent = 1,
+        Good,
+        Fair,
+        Poor,
         NotFunctional
     }
 }

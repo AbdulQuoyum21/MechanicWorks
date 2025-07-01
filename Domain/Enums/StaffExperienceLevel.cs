@@ -1,5 +1,6 @@
 ﻿namespace Mechanic.Domain.Enums;
+
 public enum StaffExperienceLevel
 {
-    Amateur = 1 , Intermediate, Professional
+    Amateur = 1, Intermediate, Professional
 }

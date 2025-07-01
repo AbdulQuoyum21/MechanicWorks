@@ -1,18 +1,14 @@
-﻿using System.Security.Cryptography;
-using System.Text;
+﻿using System.Text;
 using Microsoft.AspNetCore.Identity;
 
 namespace Mechanic.Domain.Common.Utilities
 {
-
     public class TextGenerationUtility
     {
         private static int DEFAULT_MIN_PASSWORD_LENGTH = 6;
         private static int DEFAULT_MAX_PASSWORD_LENGTH = 10;
 
         private static string PASSWORD_CHARS_LCASE = "abcdefgijkmnpqrstwxyz";
-
-
 
         public static string GenerateRandomDigits(int length)
         {
@@ -31,6 +27,7 @@ namespace Mechanic.Domain.Common.Utilities
 
             return passwordBuilder.ToString();
         }
+
         public static string GenerateRandomPassword(PasswordOptions opts)
         {
             if (opts == null) opts = new PasswordOptions()
@@ -43,8 +40,9 @@ namespace Mechanic.Domain.Common.Utilities
                 RequireUppercase = true
             };
 
-            string[] randomChars = new[] {
-                "ABCDEFGHJKLMNOPQRSTUVWXYZ",    // uppercase 
+            string[] randomChars = new[]
+            {
+                "ABCDEFGHJKLMNOPQRSTUVWXYZ",    // uppercase
                 "abcdefghijkmnopqrstuvwxyz",    // lowercase
                 "0123456789",                   // digits
                 "!@$?_-"                        // non-alphanumeric
@@ -78,7 +76,5 @@ namespace Mechanic.Domain.Common.Utilities
 
             return new string(chars.ToArray());
         }
-    } 
-
+    }
 }
-

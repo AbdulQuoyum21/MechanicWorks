@@ -10,7 +10,4 @@ namespace Mechanic.Domain.Entities
         public string LastName { get; set; } = "";
         public Gender Gender { get; set; }
     }
-
-
-
 }

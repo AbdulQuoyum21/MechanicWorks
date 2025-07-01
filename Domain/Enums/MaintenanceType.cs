@@ -2,6 +2,6 @@
 {
     public enum MaintenanceType
     {
-       Maintenance = 1, Repair
+        Maintenance = 1, Repair
     }
 }

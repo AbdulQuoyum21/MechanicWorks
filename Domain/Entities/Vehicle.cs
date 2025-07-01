@@ -11,37 +11,46 @@ namespace Mechanic.Domain.Entities
     {
         public long CustomerId { get; set; }
         public string Brand { get; set; }
+
         /// <summary>
         /// The model of the vehicle, such as "Camry", "Civic", etc. This should not be empty
         /// </summary>
         public string Model { get; set; }
+
         public int ManufactureYear { get; set; }
+
         /// <summary>
         /// The vehicle's plate number, which can be empty if not applicable.
         /// </summary>
         public string PlateNumber { get; set; }
+
         /// <summary>
         /// Odometer reading before the vehicle was serviced or inspected. in KM
         /// </summary>
         public decimal OdometerBefore { get; set; } = 0.0m;
+
         /// <summary>
         /// Odometer reading after the vehicle was serviced or inspected. in KM
         /// </summary>
         public decimal OdometerAfter { get; set; } = 0.0m;
+
         public string GeneratedId { get; set; }
+
         /// <summary>
         /// Initial condition of the vehicle when it was added to the system.
         /// </summary>
         public VehicleCondition InitialCondition { get; set; }
 
         public virtual Customer Customer { get; set; }
+
         public string GenerateId()
         {
-           
             if (string.IsNullOrEmpty(Brand)) throw new BusinessLogicException("Brand cannot be empty.");
             return $"{Brand}-{Model}-{ManufactureYear}-{TextGenerationUtility.GenerateRandomDigits(4).ToUpperInvariant()}";
         }
-        public Vehicle() { }
+
+        public Vehicle()
+        { }
 
         public Vehicle(long customerId, string brand, string model, int manufactureYear, string? plateNumber,
                decimal odometerBefore,
@@ -56,7 +65,6 @@ namespace Mechanic.Domain.Entities
             GeneratedId = GenerateId();
             Model = model;
             ManufactureYear = manufactureYear;
-
 
             if (customerId <= 0)
             {
@@ -93,8 +101,6 @@ namespace Mechanic.Domain.Entities
             {
                 throw new BusinessLogicException("Odometer reading after cannot be less than OdometerBefore.");
             }
-
-            
         }
     }
 }

@@ -1,10 +1,12 @@
 ﻿namespace Mechanic.Domain.Common
 {
-    public class BusinessLogicException:Exception
+    public class BusinessLogicException : Exception
     {
-        public BusinessLogicException() { }
+        public BusinessLogicException()
+        { }
 
-        public BusinessLogicException(string message) : base(message) { }
-
-    } 
+        public BusinessLogicException(string message) : base(message)
+        {
+        }
+    }
 }

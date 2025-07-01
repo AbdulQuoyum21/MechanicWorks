@@ -3,7 +3,7 @@ using Mechanic.Domain.Enums;
 
 namespace Mechanic.Domain.Entities
 {
-    public class Staff:BaseClass
+    public class Staff : BaseClass
     {
         public long ApplicationUserId { get; set; }
         public string Firstname { get; set; }
@@ -12,5 +12,4 @@ namespace Mechanic.Domain.Entities
         public StaffType StaffType { get; set; }
         public Gender Gender { get; set; }
     }
-    
 }

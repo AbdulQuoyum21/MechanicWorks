@@ -3,7 +3,7 @@ using Mechanic.Domain.Enums;
 
 namespace Mechanic.Domain.Entities
 {
-    public class FileUpload: BaseClass
+    public class FileUpload : BaseClass
     {
         public string FileName { get; set; }
         public string RelativeUrl { get; set; }
@@ -12,5 +12,4 @@ namespace Mechanic.Domain.Entities
         public long Size { get; set; }
         public long AppUserId { get; set; }
     }
-    
 }
